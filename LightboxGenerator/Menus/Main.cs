@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LightboxGenerator.Core;
 
 namespace LightboxGenerator
 {
@@ -24,7 +25,7 @@ namespace LightboxGenerator
 
         private void downloadtemplate_Click(object sender, EventArgs e)
         {
-
+            Downloader.ShowDownloadPresetWindow();
         }
     }
 }
