@@ -41,27 +41,39 @@ namespace LightboxGenerator.Core
                 using (WebClient client = new WebClient())
                 {
                     client.DownloadFile("https://github.com/dreamyoe/etslightboxmaker/raw/main/Downloads/dd-light-scaniar2009.dds", Path.Combine(dialog.InitialDirectory, dialog.FileName));
-                    client.DownloadFileCompleted += DownloadComplete;
+                    DownloadComplete();
                 }
             }
 
             if (id == 2) // Scania Streamline
             {
-
+                using (WebClient client = new WebClient())
+                {
+                    client.DownloadFile("https://github.com/dreamyoe/etslightboxmaker/raw/main/Downloads/dd-light-scaniastreamline.dds", Path.Combine(dialog.InitialDirectory, dialog.FileName));
+                    DownloadComplete();
+                }
             }
 
             if (id == 3) // Volvo FH16 2009
             {
-
+                using (WebClient client = new WebClient())
+                {
+                    client.DownloadFile("https://github.com/dreamyoe/etslightboxmaker/raw/main/Downloads/dd-light-volvo-fh16-2009.dds", Path.Combine(dialog.InitialDirectory, dialog.FileName));
+                    DownloadComplete();
+                }
             }
 
             if (id == 4) // Volvo FH16 2012
             {
-
+                using (WebClient client = new WebClient())
+                {
+                    client.DownloadFile("https://github.com/dreamyoe/etslightboxmaker/raw/main/Downloads/dd-light-volvo-fh16-2012.dds", Path.Combine(dialog.InitialDirectory, dialog.FileName));
+                    DownloadComplete();
+                }
             }
         }
 
-        private static void DownloadComplete(object sender, AsyncCompletedEventArgs e)
+        private static void DownloadComplete()
         {
             MessageBox.Show("Download complete!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
