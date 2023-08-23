@@ -30,6 +30,7 @@ namespace LightboxGenerator
         private void InitializeComponent()
         {
             this.quitbo = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.quitbox = new System.Windows.Forms.Label();
             this.downloadtemplate = new System.Windows.Forms.Button();
             this.modname = new System.Windows.Forms.TextBox();
@@ -40,7 +41,6 @@ namespace LightboxGenerator
             this.panel1 = new System.Windows.Forms.Panel();
             this.currenttruck = new System.Windows.Forms.Label();
             this.modid = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.upload = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -60,6 +60,18 @@ namespace LightboxGenerator
             this.quitbo.Name = "quitbo";
             this.quitbo.Size = new System.Drawing.Size(884, 37);
             this.quitbo.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(3, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(199, 21);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "ETS2 Lightbox Generator";
             // 
             // quitbox
             // 
@@ -179,18 +191,6 @@ namespace LightboxGenerator
             this.modid.Size = new System.Drawing.Size(100, 13);
             this.modid.TabIndex = 9;
             this.modid.Text = "Mod ID*";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(3, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(199, 21);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "ETS2 Lightbox Generator";
             // 
             // label3
             // 

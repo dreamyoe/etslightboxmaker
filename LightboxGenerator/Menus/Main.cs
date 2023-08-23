@@ -76,7 +76,9 @@ namespace LightboxGenerator
 
             using (WebClient client = new WebClient())
             {
-                client.DownloadFile("https://github.com/dreamyoe/etslightboxmaker/raw/main/Downloads/mod%20preset/mod.zip", dialog.SelectedPath);
+                client.DownloadFile("https://github.com/dreamyoe/etslightboxmaker/raw/main/Downloads/mod%20preset/mod.zip", Path.Combine(dialog.SelectedPath, "mod.zip"));
+
+                ZipFile.CreateFromDirectory()
             }
         }
     }
