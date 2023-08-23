@@ -6,17 +6,25 @@ using System.Windows.Forms;
 
 namespace LightboxGenerator
 {
-    static class Program
+    public static class Program
     {
+        public static Window mainWindow;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        private static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Window());
+            
+            mainWindow = new Window();
+            Application.Run(mainWindow);
+        }
+
+        public static void SetTruck(string name)
+        {
+            mainWindow.currenttruck.Text = "Selected truck: " + name;
         }
     }
 }
