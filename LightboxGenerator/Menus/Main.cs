@@ -68,9 +68,15 @@ namespace LightboxGenerator
 
         private void exportmodbutton_Click(object sender, EventArgs e)
         {
+            FolderBrowserDialog dialog = new FolderBrowserDialog();
+
+            dialog.Description = "Select your ETS mod folder";
+
+            dialog.ShowDialog();
+
             using (WebClient client = new WebClient())
             {
-                client.DownloadFile
+                client.DownloadFile("https://github.com/dreamyoe/etslightboxmaker/raw/main/Downloads/mod%20preset/mod.zip", dialog.SelectedPath);
             }
         }
     }
