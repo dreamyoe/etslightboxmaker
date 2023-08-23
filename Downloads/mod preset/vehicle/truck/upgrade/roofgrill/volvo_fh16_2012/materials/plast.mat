@@ -1,0 +1,9 @@
+material : "eut2.dif" {
+	texture[0] : "/vehicle/truck/upgrade/roofgrill/volvo_fh16_2012/textures/plast.tobj"
+	texture_name[0] : "texture_base"
+	ambient : { 0.2 , 0.2 , 0.2 }
+	diffuse : { 0.4 , 0.4 , 0.4 }
+	shininess : 100
+	specular : { 0.0 , 0.0 , 0.0 }
+	tint : { 1.0 , 1.0 , 1.0 }
+}

@@ -1,0 +1,13 @@
+material : "eut2.dif.lum.spec" {
+	texture[0] : "/vehicle/truck/upgrade/roofgrill/volvo_fh16_2009/textures/dd-light.tobj"
+	texture_name[0] : "texture_base"
+	texture[1] : "/vehicle/truck/upgrade/roofgrill/volvo_fh16_2009/textures/dd-light.tobj"
+	texture_name[1] : "texture_base"
+	texture[2] : "/material/environment/vehicle_reflection.tobj"
+	texture_name[2] : "texture_reflection"
+	add_ambient : 0
+	diffuse : { 0.709804 , 0.709804 , 0.709804 }
+	env_factor : { 0.478431 , 0.478431 , 0.478431 }
+	shininess : 0
+	specular : { 0.384314 , 0.384314 , 0.384314 }
+}

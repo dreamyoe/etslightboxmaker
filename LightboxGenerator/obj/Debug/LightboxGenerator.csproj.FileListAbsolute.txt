@@ -1,0 +1,10 @@
+C:\Users\julian.verwoerd\Documents\GitHub\etslightboxmaker\LightboxGenerator\bin\Debug\LightboxGenerator.exe.config
+C:\Users\julian.verwoerd\Documents\GitHub\etslightboxmaker\LightboxGenerator\bin\Debug\LightboxGenerator.exe
+C:\Users\julian.verwoerd\Documents\GitHub\etslightboxmaker\LightboxGenerator\bin\Debug\LightboxGenerator.pdb
+C:\Users\julian.verwoerd\Documents\GitHub\etslightboxmaker\LightboxGenerator\obj\Debug\LightboxGenerator.csproj.AssemblyReference.cache
+C:\Users\julian.verwoerd\Documents\GitHub\etslightboxmaker\LightboxGenerator\obj\Debug\LightboxGenerator.Window.resources
+C:\Users\julian.verwoerd\Documents\GitHub\etslightboxmaker\LightboxGenerator\obj\Debug\LightboxGenerator.Properties.Resources.resources
+C:\Users\julian.verwoerd\Documents\GitHub\etslightboxmaker\LightboxGenerator\obj\Debug\LightboxGenerator.csproj.GenerateResource.cache
+C:\Users\julian.verwoerd\Documents\GitHub\etslightboxmaker\LightboxGenerator\obj\Debug\LightboxGenerator.csproj.CoreCompileInputs.cache
+C:\Users\julian.verwoerd\Documents\GitHub\etslightboxmaker\LightboxGenerator\obj\Debug\LightboxGenerator.exe
+C:\Users\julian.verwoerd\Documents\GitHub\etslightboxmaker\LightboxGenerator\obj\Debug\LightboxGenerator.pdb

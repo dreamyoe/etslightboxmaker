@@ -1,0 +1,13 @@
+SiiNunit
+{
+accessory_addon_data : shape_dds_fh.volvo.fh16_2012.r_grill
+{
+	name: "Devil Roofgrill"
+	price: 1200
+	unlock: 9
+	icon: "r_grill_fh"
+	exterior_model: "/vehicle/truck/upgrade/roofgrill/volvo_fh16_2012/roofgrill_dds_fh.pmd"
+	#suitable_for[]: "l2h3.volvo.fh16_2012.cabin"
+	#suitable_for[]: "l2h4.volvo.fh16_2012.cabin"
+}
+}

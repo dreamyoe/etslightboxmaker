@@ -1,0 +1,12 @@
+SiiNunit
+{
+accessory_addon_data : shape_dds.scania.r.r_grill
+{
+	name: "Devil Lightsign"
+	price: 666
+	unlock: 6
+	icon: "r_grill_dd"
+	exterior_model: "/vehicle/truck/upgrade/roofgrill/scania_rcab_2009/roofgrill_dds.pmd"
+	#suitable_for[]: "topline.scania.r.cabin" 
+}
+}
