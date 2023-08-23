@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\Downloader.cs" />
+    <Compile Include="Core\ModMaker.cs" />
     <Compile Include="Menus\Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +60,12 @@
     <Compile Include="Menus\PresetDownloaderPopup.Designer.cs">
       <DependentUpon>PresetDownloaderPopup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menus\SelectTruck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menus\SelectTruck.Designer.cs">
+      <DependentUpon>SelectTruck.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Menus\Main.resx">
@@ -66,6 +73,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menus\PresetDownloaderPopup.resx">
       <DependentUpon>PresetDownloaderPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menus\SelectTruck.resx">
+      <DependentUpon>SelectTruck.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

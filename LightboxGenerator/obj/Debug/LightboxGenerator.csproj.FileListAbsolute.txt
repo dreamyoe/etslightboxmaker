@@ -9,3 +9,4 @@ C:\Users\julian.verwoerd\Documents\GitHub\etslightboxmaker\LightboxGenerator\obj
 C:\Users\julian.verwoerd\Documents\GitHub\etslightboxmaker\LightboxGenerator\obj\Debug\LightboxGenerator.exe
 C:\Users\julian.verwoerd\Documents\GitHub\etslightboxmaker\LightboxGenerator\obj\Debug\LightboxGenerator.pdb
 C:\Users\julian.verwoerd\Documents\GitHub\etslightboxmaker\LightboxGenerator\obj\Debug\LightboxGenerator.Menus.PresetDownloaderPopup.resources
+C:\Users\julian.verwoerd\Documents\GitHub\etslightboxmaker\LightboxGenerator\obj\Debug\LightboxGenerator.Menus.SelectTruck.resources
