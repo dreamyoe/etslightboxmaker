@@ -8,7 +8,7 @@ namespace LightboxGenerator.Core
 {
     public static class ModMaker
     {
-        private static string selectedTruck = "None";
+        public static string selectedTruck = "None";
 
         public static void SelectTruck(string type)
         {
@@ -24,6 +24,42 @@ namespace LightboxGenerator.Core
             Program.mainWindow.label3.Visible = true;
 
             Program.SetTruck(type);
+        }
+
+        public static bool CheckForValidModID(string id)
+        {
+            if (id == "Mod ID*")
+            {
+                return false;
+            }
+
+            string numbers = "0123456789";
+            char[] numbersChars = numbers.ToCharArray();
+
+            for (int i = 0; i < numbersChars.Length; i++)
+            {
+                if (numbers.Contains(numbersChars[i]))
+                {
+                    return false;
+                }
+            }
+
+            char[] idchars = id.ToCharArray();
+
+            for (int i = 0; i < idchars.Length; i++)
+            {
+                if (char.IsUpper(idchars[i]))
+                {
+                    return false;
+                }
+            }
+
+            if (id.Contains(' '))
+            {
+                return false;
+            }
+
+            return true;
         }
     }
 }

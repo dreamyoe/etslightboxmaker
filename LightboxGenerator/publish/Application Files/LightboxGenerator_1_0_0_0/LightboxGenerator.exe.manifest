@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="LightboxGenerator.exe" version="1.0.0.0" publicKeyToken="fe3db9a1d9b2ffad" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="LightboxGenerator" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="LightboxGenerator.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC Manifest Options
+             If you want to change the Windows User Account Control level replace the 
+             requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            Specifying requestedExecutionLevel element will disable file and registry virtualization. 
+            Remove this element if your application requires this virtualization for backwards
+            compatibility.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LightboxGenerator.exe" size="25592">
+      <assemblyIdentity name="LightboxGenerator" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>2/3DkwKyIcz1oezKlMxHf0lsjYSuXsYGoDxvyHAP8qE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="LightboxGenerator.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>R+Wg8QGvQVHX8T0ta/qbhH1bXkqY0fRnS3wBV3J0bN8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- A list of the Windows versions that this application has been tested on
+           and is designed to work with. Uncomment the appropriate elements
+           and Windows will automatically select the most compatible environment. -->
+      <!-- Windows Vista -->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}" />-->
+      <!-- Windows 7 -->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}" />-->
+      <!-- Windows 8 -->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}" />-->
+      <!-- Windows 8.1 -->
+      <!--<supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}" />-->
+      <!-- Windows 10 -->
+      <!--<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=PANTRONIC\julian.verwoerd" issuerKeyHash="1670ec731dd853b7132832eebaf26f143890916d" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>G4ByeCDvBIR/t46MBcoBHjFCIZX+oTy5y1Qvu3qVWns=</DigestValue></Reference></SignedInfo><SignatureValue>LJLW75wl6wis0RKfmsobSMnCwmDBjl8bz/CePgFEB4WrLuce+qhVoxme0LXIr4nEsxsALoRKh4F3m3fZkZw7+lTjfXurxqnqC+FOAbp1sXbaWtsSQPeFgmrRhjL3eRcOor+1ncNrBV1jU7LLZzpGj/8urRSjladzi13h6wYvntM=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>1WhyvDu0RjF40/u0MrAjge+6s6Cuv26SGWNTqYLoyFQ36yyy3kra0MgLLqLcySTXsUS/TV9GD4f35/akj0YW1ygoCAs4uJlQRWHS9z1QHW53lZ/2Y0oQc6pBbCS5NSceH7EI+n50HCTGGHeoQ1n3xou3gJw08RmabAldEyR05KU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="7b5a957abb2f54cbb93ca1fe952142311e01ca058c8eb77f8404ef207872801b" Description="" Url=""><as:assemblyIdentity name="LightboxGenerator.exe" version="1.0.0.0" publicKeyToken="fe3db9a1d9b2ffad" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=PANTRONIC\julian.verwoerd</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>7svuDN0jYOIdA55J+1o8tKvyV3riyfPziyccOSMsqSA=</DigestValue></Reference></SignedInfo><SignatureValue>NDtJJOuYEgAD/LVyNnWi5OtNABa4XxyS3Di2/fS7EwNq+1gwReDLbgcCcmbGwoLSgjUdVqcONmLY3kA6ZdVeT/QEt+1VO/TflZBmxHLIReoUNtD3p5xZ8vAMyL399z91AStfsZTbBD/Ds+h0xjodWfCg2W8Ix3tG3claUvUKWF0=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>1WhyvDu0RjF40/u0MrAjge+6s6Cuv26SGWNTqYLoyFQ36yyy3kra0MgLLqLcySTXsUS/TV9GD4f35/akj0YW1ygoCAs4uJlQRWHS9z1QHW53lZ/2Y0oQc6pBbCS5NSceH7EI+n50HCTGGHeoQ1n3xou3gJw08RmabAldEyR05KU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB/TCCAWagAwIBAgIQFIJDMSu0YZVJQATYgawhYDANBgkqhkiG9w0BAQsFADA9MTswOQYDVQQDHjIAUABBAE4AVABSAE8ATgBJAEMAXABqAHUAbABpAGEAbgAuAHYAZQByAHcAbwBlAHIAZDAeFw0yMzA4MjQxNjEyMzNaFw0yNDA4MjMyMjEyMzNaMD0xOzA5BgNVBAMeMgBQAEEATgBUAFIATwBOAEkAQwBcAGoAdQBsAGkAYQBuAC4AdgBlAHIAdwBvAGUAcgBkMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDVaHK8O7RGMXjT+7QysCOB77qzoK6/bpIZY1OpgujIVDfrLLLeStrQyAsuotzJJNexRL9NX0YPh/fn9qSPRhbXKCgICzi4mVBFYdL3PVAdbneVn/ZjShBzqkFsJLk1Jx4fsQj6fnQcJMYYd6hDWffGi7eAnDTxGZpsCV0TJHTkpQIDAQABMA0GCSqGSIb3DQEBCwUAA4GBAK4bQTLhuOKb8zAu91e3G6eHqzNHvSOBMsJW+P48MfmC3YQDqa3j2db7JZvRwvpsmUd8MVh4NG3wToL9J9VqcxO3s3MsOMhTH6iSt4CH9Sq1BFXIIWZX1MdhFnuMvM9oJRBWfd4XkEzwfh3mufZzbnRg6rc3hsIF0u92EhNobb/p</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

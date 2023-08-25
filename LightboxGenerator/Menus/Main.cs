@@ -19,6 +19,8 @@ namespace LightboxGenerator
     {
         private SelectTruck selectTruck;
 
+        private string ddsPath;
+
         public Window()
         {
             InitializeComponent();
@@ -49,9 +51,9 @@ namespace LightboxGenerator
 
             dialog.ShowDialog();
 
-            string path = Path.Combine(dialog.InitialDirectory, dialog.FileName);
+            ddsPath = Path.Combine(dialog.InitialDirectory, dialog.FileName);
 
-            if (path != null)
+            if (ddsPath != null)
             {
                 if (!dialog.FileName.Contains(".dds"))
                 {
@@ -74,12 +76,107 @@ namespace LightboxGenerator
 
             dialog.ShowDialog();
 
-            using (WebClient client = new WebClient())
+            if (modname.Text == "Mod Name*")
             {
-                client.DownloadFile("https://github.com/dreamyoe/etslightboxmaker/raw/main/Downloads/mod%20preset/mod.zip", Path.Combine(dialog.SelectedPath, "mod.zip"));
-
-                ZipFile.CreateFromDirectory()
+                MessageBox.Show("Please enter a valid mod name!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
+
+            if (ModMaker.CheckForValidModID(modid.Text))
+            {
+                MessageBox.Show("Please enter a valid mod id!\nA valid mod id must contain:\n- No spaces\n- No capitals\n-No numbers", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (modversion.Text == "Version*")
+            {
+                MessageBox.Show("Please enter a valid version!\nExample: 1.0", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                using (WebClient client = new WebClient())
+                {
+                    string zippath = Path.Combine(dialog.SelectedPath, "result.zip");
+                    string extractpath = Path.Combine(dialog.SelectedPath, modid.Text);
+                    client.DownloadFile("https://github.com/dreamyoe/etslightboxmaker/raw/main/Downloads/mod%20preset/mod.zip", zippath);
+
+                    ZipFile.ExtractToDirectory(zippath, extractpath);
+
+                    File.Delete(zippath);
+
+                    File.WriteAllText(Path.Combine(extractpath, "moddescription.txt"), moddescription.Text);
+
+                    string manifest = File.ReadAllText(Path.Combine(extractpath, "manifest.sii"));
+
+                    manifest = manifest.Replace("packname", modname.Text);
+                    manifest = manifest.Replace("packauthor", modauthor.Text);
+                    manifest = manifest.Replace("packversion", modversion.Text);
+
+                    File.WriteAllText(Path.Combine(extractpath, "manifest.sii"), manifest);
+
+                    if (ModMaker.selectedTruck == "Scania R 2009")
+                    {
+                        Directory.Delete(Path.Combine(extractpath, "vehicle/truck/upgrade/roofgrill/scania_streamline"), true);
+                        Directory.Delete(Path.Combine(extractpath, "vehicle/truck/upgrade/roofgrill/volvo_fh16_2009"), true);
+                        Directory.Delete(Path.Combine(extractpath, "vehicle/truck/upgrade/roofgrill/volvo_fh16_2012"), true);
+
+                        Directory.Delete(Path.Combine(extractpath, "def/vehicle/truck/scania.streamline"), true);
+                        Directory.Delete(Path.Combine(extractpath, "def/vehicle/truck/volvo.fh16"), true);
+                        Directory.Delete(Path.Combine(extractpath, "def/vehicle/truck/volvo.fh16_2012"), true);
+
+                        File.Replace(ddsPath, Path.Combine(extractpath, "vehicle/truck/upgrade/roofgrill/scania_rcab_2009/textures/dd-light.dds"), Path.Combine(extractpath, "vehicle/truck/upgrade/roofgrill/scania_rcab_2009/textures/dd-light_OLD.dds"));
+                    }
+
+                    if (ModMaker.selectedTruck == "Scania Streamline")
+                    {
+                        Directory.Delete(Path.Combine(extractpath, "vehicle/truck/upgrade/roofgrill/scania_rcab_2009"), true);
+                        Directory.Delete(Path.Combine(extractpath, "vehicle/truck/upgrade/roofgrill/volvo_fh16_2009"), true);
+                        Directory.Delete(Path.Combine(extractpath, "vehicle/truck/upgrade/roofgrill/volvo_fh16_2012"), true);
+
+                        Directory.Delete(Path.Combine(extractpath, "def/vehicle/truck/scania_rcab_2009"), true);
+                        Directory.Delete(Path.Combine(extractpath, "def/vehicle/truck/volvo.fh16"), true);
+                        Directory.Delete(Path.Combine(extractpath, "def/vehicle/truck/volvo.fh16_2012"), true);
+
+                        File.Replace(ddsPath, Path.Combine(extractpath, "vehicle/truck/upgrade/roofgrill/scania_streamline/textures/dd-light.dds"), Path.Combine(extractpath, "vehicle/truck/upgrade/roofgrill/scania_streamline/textures/dd-light_OLD.dds"));
+                    }
+
+                    if (ModMaker.selectedTruck == "Volvo FH16 2009")
+                    {
+                        Directory.Delete(Path.Combine(extractpath, "vehicle/truck/upgrade/roofgrill/scania_rcab_2009"), true);
+                        Directory.Delete(Path.Combine(extractpath, "vehicle/truck/upgrade/roofgrill/scania_streamline"), true);
+                        Directory.Delete(Path.Combine(extractpath, "vehicle/truck/upgrade/roofgrill/volvo_fh16_2012"), true);
+
+                        Directory.Delete(Path.Combine(extractpath, "def/vehicle/truck/scania_rcab_2009"), true);
+                        Directory.Delete(Path.Combine(extractpath, "def/vehicle/truck/scania.streamline"), true);
+                        Directory.Delete(Path.Combine(extractpath, "def/vehicle/truck/volvo.fh16_2012"), true);
+
+                        File.Replace(ddsPath, Path.Combine(extractpath, "vehicle/truck/upgrade/roofgrill/volvo_fh16_2009/textures/dd-light.dds"), Path.Combine(extractpath, "vehicle/truck/upgrade/roofgrill/volvo_fh16_2009/textures/dd-light_OLD.dds"));
+                    }
+
+                    if (ModMaker.selectedTruck == "Volvo FH16 2012")
+                    {
+                        Directory.Delete(Path.Combine(extractpath, "vehicle/truck/upgrade/roofgrill/scania_rcab_2009"), true);
+                        Directory.Delete(Path.Combine(extractpath, "vehicle/truck/upgrade/roofgrill/scania_streamline"), true);
+                        Directory.Delete(Path.Combine(extractpath, "vehicle/truck/upgrade/roofgrill/volvo_fh16_2009"), true);
+
+                        Directory.Delete(Path.Combine(extractpath, "def/vehicle/truck/scania_rcab_2009"), true);
+                        Directory.Delete(Path.Combine(extractpath, "def/vehicle/truck/scania.streamline"), true);
+                        Directory.Delete(Path.Combine(extractpath, "def/vehicle/truck/volvo.fh16"), true);
+
+                        File.Replace(ddsPath, Path.Combine(extractpath, "vehicle/truck/upgrade/roofgrill/volvo_fh16_2012/textures/dd-light.dds"), Path.Combine(extractpath, "vehicle/truck/upgrade/roofgrill/volvo_fh16_2012/textures/dd-light_OLD.dds"));
+                    }
+                }
+            }
+
+            catch(Exception ex)
+            {
+                MessageBox.Show("There was an critical error generating your mod:\n" + ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+
+            MessageBox.Show("Successfully generated mod!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

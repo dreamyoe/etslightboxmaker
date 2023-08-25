@@ -46,6 +46,7 @@ namespace LightboxGenerator
             this.label4 = new System.Windows.Forms.Label();
             this.uploadlabel1 = new System.Windows.Forms.Label();
             this.exportmodbutton = new System.Windows.Forms.Button();
+            this.modversion = new System.Windows.Forms.TextBox();
             this.quitbo.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -111,7 +112,7 @@ namespace LightboxGenerator
             this.modname.Name = "modname";
             this.modname.Size = new System.Drawing.Size(100, 13);
             this.modname.TabIndex = 2;
-            this.modname.Text = "Mod Name";
+            this.modname.Text = "Mod Name*";
             // 
             // modauthor
             // 
@@ -261,6 +262,17 @@ namespace LightboxGenerator
             this.exportmodbutton.Visible = false;
             this.exportmodbutton.Click += new System.EventHandler(this.exportmodbutton_Click);
             // 
+            // modversion
+            // 
+            this.modversion.BackColor = System.Drawing.Color.Silver;
+            this.modversion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.modversion.ForeColor = System.Drawing.Color.Black;
+            this.modversion.Location = new System.Drawing.Point(360, 125);
+            this.modversion.Name = "modversion";
+            this.modversion.Size = new System.Drawing.Size(50, 13);
+            this.modversion.TabIndex = 15;
+            this.modversion.Text = "Version*";
+            // 
             // Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -268,6 +280,7 @@ namespace LightboxGenerator
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(884, 461);
             this.ControlBox = false;
+            this.Controls.Add(this.modversion);
             this.Controls.Add(this.exportmodbutton);
             this.Controls.Add(this.uploadlabel1);
             this.Controls.Add(this.label4);
@@ -315,6 +328,7 @@ namespace LightboxGenerator
         public System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label uploadlabel1;
         public System.Windows.Forms.Button exportmodbutton;
+        public System.Windows.Forms.TextBox modversion;
     }
 }
 
